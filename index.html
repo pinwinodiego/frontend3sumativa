@@ -162,63 +162,71 @@
     </div>
   </section>
     <br><br><br><br><br>
-    <section class="REGISTRATE" id="REGISTRATE">
-      <h4>Registra tu moto para agregarla al foro</h4>
-      <div class="mb-3">
-          <h2>Registrar</h2>
-          <label for="Marca">Marca</label>
-          <input type="text" id="Marca" placeholder="Honda">
-          <label for="Modelo">Modelo</label>
-          <input type="text" id="Modelo" placeholder="CBR650">
-          <label for="Cilindrada">Cilindrada</label>
-          <input type="text" id="Cilindrada" placeholder="650cc">
-          <label for="TipoMoto">Tipo de moto</label>
-          <input type="text" id="TipoMoto" placeholder="Scrumbler">
-          <label for="FechaRegistro">Fecha de inscripción</label>
-          <input type="date" id="FechaRegistro">
-          <label>Tengo más de 1 casco</label>
-          <input id="checkCasco" value="checkCasco" type="checkbox">
-          <label>Tengo guantes</label>
-          <input id="checkGuantes" value="checkGuantes" type="checkbox">
-          <label>Tengo chaqueta</label>
-          <input id="checkChaqueta" value="checkChaqueta" type="checkbox">
-          <label for="FechaMoto">Año de modelo</label>
-          <select id="FechaMoto">
-              <option value="2024">2024</option>
-              <option value="2023">2023</option>
-              <option value="2022">2022</option>
-              <option value="2021">2021</option>
-              <option value="2020">2020</option>
-              <option value="2019">2019</option>
-              <option value="2018">2018</option>
-              <option value="2017">2017</option>
-          </select>
-          <label for="Experiencia">Cuéntanos algo breve de tu experiencia en ruta</label>
-          <textarea id="Experiencia" cols="30" rows="5"></textarea>
-          <button id="btnRegistrar">Registrar</button>
-      </div>
-
-      <!-- Tabla para mostrar los datos -->
-      <table id="tMotos">
-          <thead>
-              <tr>
-                  <th>Marca</th>
-                  <th>Modelo</th>
-                  <th>Cilindrada</th>
-                  <th>Tipo de moto</th>
-                  <th>Fecha de inscripción</th>
-                  <th>Más de un casco</th>
-                  <th>Tengo guantes</th>
-                  <th>Tengo chaqueta</th>
-                  <th>Año del modelo</th>
-                  <th>Experiencia</th>
-              </tr>
-          </thead>
-          <tbody id="tbMotos">
-              <!-- Filas dinámicas aquí -->
-          </tbody>
-      </table>
-  </section>
+  <section class="REGISTRATE" ID="REGISTRATE">
+    <h4>Registra tu moto para agregarla  al foro</h4>
+    <div class="mb-3">
+      <h2>Registrar</h2>
+      <br>
+      <label for="Marca">Marca</label>
+      <input type="text" id="Marca" placeholder="Honda">
+      <br><br>
+      <label for="Modelo">Modelo</label>
+      <input type="text" id="Modelo" placeholder="CBR650">
+      <br><br>
+      <label for="Cilindrada">Cilindrada</label>
+      <input type="text" id="Cilindrada" placeholder="650cc">
+      <br><br>
+      <label for="TipoMoto">Tipo de moto</label>
+      <input type="text" id="TipoMoto" placeholder="Scrumbler">
+      <br><br>
+      <label for="FechaRegistro">Fecha de inscripción</label>
+      <input type="date" id="FechaRegistro">
+      <br><br>
+      <label>Tengo más de 1 casco</label>
+      <input id="checkCasco" value="checkCasco" type="checkbox">
+      <br><br>
+      <label>Tengo guantes</label>
+      <input id="checkGuantes" value="checkGuantes" type="checkbox">
+      <br><br>
+      <label>Tengo chaqueta</label>
+      <input id="checkChaqueta" value="checkChaqueta" type="checkbox">
+      <br><br>
+      <label for="FechaMoto">Año de modelo</label>
+      <select id="FechaMoto">
+          <option value="2024">2024</option>
+          <option value="2023">2023</option>
+          <option value="2022">2022</option>
+          <option value="2021">2021</option>
+          <option value="2020">2020</option>
+          <option value="2019">2019</option>
+          <option value="2018">2018</option>
+          <option value="2017">2017</option>
+      </select>
+      <br><br>
+      <label for="Experiencia">Cuentános algo breve de tu experiencia en ruta</label>
+      <br><br>
+      <textarea id="Experiencia" cols="30" rows="5"></textarea>
+      <br><br>
+      <button id="btnRegistrar">Registrar</button>
+       <!-- Tabla para mostrar los datos de las motos registradas -->
+       <table id="tMotos">
+           <thead>
+               <!-- La estructura de la tabla se genera dinámicamente en script.js -->
+               <tr>
+                   <th>Marca</th>
+                   <th>Modelo</th>
+                   <th>Cilindrada</th>
+                   <th>Tipo de moto</th>
+                   <th>Fecha de inscripción</th>
+                   <th>Más de un casco</th>
+                   <th>Tengo guantes</th>
+                   <th>Tengo chaqueta</th>
+                   <th>Año del modelo</th>
+                   <th>Experiencia</th>
+               </tr>
+           </thead>
+           <tbody id="tbMotos"></tbody>
+       </table>
    
        <h2>Actualizar</h2>
        <br>

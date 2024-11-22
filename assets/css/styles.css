@@ -3,134 +3,175 @@ body {
     align-items: center;
     height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
-    line-height: 2;
-    background: rgb(209, 206, 206);
-    color: rgb(8, 8, 8);
 }
 #label_toggle {
-    cursor: pointer;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 2em;
+  cursor: pointer;
 }
 .contenedor {
-    padding: 20px;
+  padding: 20px;
 }
 .navmarcas a, .navinicio a {
-    color: white;
-    padding: 10px;
-    text-decoration: none;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
 }
 .navmarcas, .navinicio {
-    background-color: black;
-    text-align: center;
-    padding: 10px 0;
+  background-color: black;
+  text-align: center;
+  padding: 10px 0;
 }
 h1, h3, h4, h5 {
-    text-align: center;
+  text-align: center;
 }
-h1 {
-    font-size: 100px;
-    height: 300px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-h2, h3 {
-    font-size: 30px;
-    height: 50px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: auto;
-}
-h4 {
-    font-size: 40px;
-    height: 100px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-h5 {
-    font-size: 30px;
-    height: 50px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-left: 1700px;
-    margin-top: -300px;
-}
+
 .redsocial li .face {
-    position: absolute;
-    top: 80px;
-    right: 5px;
-    font-size: 2em;
-    cursor: pointer;
+  position: absolute;
+  top: 80px;
+  right: 5px;
+  font-size: 2em;
+  cursor: pointer;
 }
+
 .redsocial li .ig {
-    position: absolute;
-    top: 160px;
-    right: 5px;
-    font-size: 2em;
-    cursor: pointer;
+  position: absolute;
+  top: 160px;
+  right: 5px;
+  font-size: 2em;
+  cursor: pointer;
 }
+
 .redsocial img {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 iframe {
-    display: block;
-    margin: 0 auto;
+  display: block;
+  margin: 0 auto;
 }
-#toggle {
-    display: none;
+
+#toggle{
+  display: none;
+ }
+
+#label_toggle{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2em;
+  cursor: pointer;
 }
-.dark {
-    background-color: black;
-    color: aliceblue;
-    transition: all 1.5s ease;
+.dark{
+  background-color: black;
+  color: aliceblue;
+  transition: all 1.5s ease;
 }
-html, body, div, span, applet, object, iframe {
-    width: 500;
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+html, body, div, span, applet, object, iframe{
+	width: 500;
+
 }
-h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img {
-    width: 500;
+h1{
+	font-size: 100px;
+	height: 300px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav {
-    height: 100px;
+ h2, h3{
+	font-size: 30px;
+	height: 50px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	margin:auto;
+ } h4{
+	font-size: 40px;
+	height: 100px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ } h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img{width: 500;} ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav{height: 100px;} output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav {
-    width: 100%;
-    text-align: center;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    transition: box-shadow 0.3s ease;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    transform: scale(2.1);
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav{ 
+	width: 100%; 
+	text-align: center;
+	padding: 10px;
+	border-radius: 5px; /* añade bordes redondeados */
+	border: 1px solid #ccc; /* añade un borde */   
+	transition: box-shadow 0.3s ease;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	transform: scale(2.1);
+	} 
+	section {
+	display: block;
 }
-section {
-    display: block;
+body {
+	line-height: 2;
+	background: rgb(209, 206, 206) ;
+	color: rgb(8, 8, 8);
+	
 }
 ol, ul {
-    list-style: none;
+	list-style: none;
 }
 blockquote, q {
-    quotes: none;
+	quotes: none;
 }
-blockquote:before, blockquote:after, q:before, q:after {
-    content: '';
-    content: none;
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
 }
 table {
-    border-collapse: collapse;
-    border-spacing: 3;
+	border-collapse: collapse;
+	border-spacing: 3;
 }
+
 .contenedor p {
-    flex-basis: 100%;
-    text-align: auto;
-    margin-top: 10px;
+  
+ 
+	flex-basis: 100%;
+	  
+	 
+	text-align: auto;
+	  
+	 
+	margin-top: 10px;
+	}
+.textwhite{
+	color:whitesmoke;
+	font-family: 'Courier New', Courier, monospace;
 }
-.textwhite {
-    color: whitesmoke;
-    font-family: 'Courier New', Courier, monospace;
+ul{
+	margin-left: 1970px;
+	margin-top: 140px;
 }
-ul {
-    margin-left: 1970px;
-    margin-top: 140px;
-}
-#choche {
-    margin-top: -100px;
+h5{
+	font-size: 30px;
+	height: 50px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	margin-left: 1700px;
+	margin-top: -300px;
+ }
+ #choche{
+	margin-top: -100px;
+ }
+.dark{
+background-color: black;
+color: aliceblue;
+transition: all 1.5s ease;
 }
