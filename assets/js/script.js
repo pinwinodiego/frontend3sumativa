@@ -39,6 +39,11 @@ const registrar = () => {
     let ccheckCasco = echeckCasco.checked;
     let ccheckGuantes = echeckGuantes.checked;
     let ccheckChaqueta = echeckChaqueta.checked;
+
+    if (!vMarca || !vModelo || !vCilindrada || !vTipoMoto || !vFechaRegistro || !vFechaMoto || !vExperiencia) {
+        alert("Todos los campos son obligatorios");
+        return;
+    }
 // Almacena los valores en un objeto
     let objeto = {
         Marca: vMarca,
@@ -52,13 +57,34 @@ const registrar = () => {
         FechaMoto: vFechaMoto,
         Experiencia: vExperiencia
     };
+
+    if (!validar(objeto)) {
+        return;
+    }
+
 // Llama a la función registrarMoto y maneja la respuesta
     registrarMoto(objeto).then(() => {
         alert("Se registró con éxito");
+        document.getElementById("updateForm").classList.add("hidden"); // Ocultar formulario
+        limpiarFormularioRegistro(); // Agregamos la llamada a la nueva función
         traerDatos();
     }).catch((r) => {
         console.log(r);
     });
+};
+
+// Agregar nueva función para limpiar el formulario de registro
+const limpiarFormularioRegistro = () => {
+    document.getElementById("Marca").value = "";
+    document.getElementById("Modelo").value = "";
+    document.getElementById("Cilindrada").value = "";
+    document.getElementById("TipoMoto").value = "";
+    document.getElementById("FechaRegistro").value = "";
+    document.getElementById("checkCasco").checked = false;
+    document.getElementById("checkGuantes").checked = false;
+    document.getElementById("checkChaqueta").checked = false;
+    document.getElementById("FechaMoto").value = "2024"; // Resetear al valor por defecto
+    document.getElementById("Experiencia").value = "";
 };
 
 // Función para obtener y mostrar los datos de las motos en la tabla
@@ -86,6 +112,7 @@ const traerDatos = () => {
         // Asigna las funciones de actualizar y eliminar a los botones correspondientes
         Motos.forEach((p) => {
             document.getElementById("UPD" + p.id).addEventListener("click", () => {
+                document.getElementById("updateForm").classList.remove("hidden");
                 document.getElementById("UPDMarca").value = p.Marca;
                 document.getElementById("UPDModelo").value = p.Modelo;
                 document.getElementById("UPDCilindrada").value = p.Cilindrada;
@@ -138,6 +165,11 @@ const actualizar = () => {
     let vFechaMoto = eFechaMoto.value;
     let vExperiencia = eExperiencia.value;
 
+    if (!vMarca || !vModelo || !vCilindrada || !vTipoMoto || !vFechaRegistro || !vFechaMoto || !vExperiencia) {
+        alert("Todos los campos son obligatorios");
+        return;
+    }
+
     let objeto = {
         Marca: vMarca,
         Modelo: vModelo,
@@ -151,10 +183,15 @@ const actualizar = () => {
         Experiencia: vExperiencia
     };
 
+    if (!validar(objeto)) {
+        return;
+    }
+
     let id = document.getElementById('btnActualizar').value;
 
     actualizarMoto(objeto, id).then(() => {
         alert('Se actualizó correctamente');
+        document.getElementById("updateForm").classList.add("hidden"); // Ocultar formulario
         traerDatos();
     }).catch((e) => {
         console.log(e);
@@ -183,3 +220,57 @@ function cambiarTamañoFuente() {
         body.style.fontSize = '1.5em';
     }
 }
+
+const validar = (moto) => {
+    // Validación de marca (solo letras, más simple)
+    const marca = moto.Marca.trim();
+    if (marca.length < 2 || marca.length > 30) {
+        alert("La marca debe tener entre 2 y 30 caracteres");
+        return false;
+    }
+
+    // Validación de cilindrada (más simple)
+    const cilindrada = moto.Cilindrada.toLowerCase();
+    if (!cilindrada.endsWith('cc')) {
+        alert("La cilindrada debe terminar en 'cc'");
+        return false;
+    }
+    
+
+    // Validación de fecha (no puede ser futura)
+    const fechaRegistro = new Date(moto.FechaRegistro);
+    if (fechaRegistro > new Date()) {
+        alert("La fecha de registro no puede ser futura");
+        return false;
+    }
+
+    // Validación de experiencia (mínimo 10 caracteres)
+    if (moto.Experiencia.length < 10) {
+        alert("La experiencia debe tener al menos 10 caracteres");
+        return false;
+    }
+
+    return true;
+};
+
+const mostrarFormularioActualizacion = () => {
+    const form = document.getElementById("updateForm");
+    form.classList.remove("hidden");
+    form.style.animation = "slideDown 0.5s ease-out";
+};
+
+// Agregar función para limpiar formulario
+const limpiarFormulario = () => {
+    document.getElementById("updateForm").classList.add("hidden");
+    // Opcional: limpiar los campos del formulario
+    document.getElementById("UPDMarca").value = "";
+    document.getElementById("UPDModelo").value = "";
+    document.getElementById("UPDCilindrada").value = "";
+    document.getElementById("UPDTipoMoto").value = "";
+    document.getElementById("UPDFechaRegistro").value = "";
+    document.getElementById("UPDcheckCasco").checked = false;
+    document.getElementById("UPDcheckGuantes").checked = false;
+    document.getElementById("UPDcheckChaqueta").checked = false;
+    document.getElementById("UPDFechaMoto").value = "";
+    document.getElementById("UPDExperiencia").value = "";
+};

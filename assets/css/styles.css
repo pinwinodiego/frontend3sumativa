@@ -1,177 +1,226 @@
-body {
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-family: Arial, Helvetica, sans-serif;
-}
-#label_toggle {
-  cursor: pointer;
-}
-.contenedor {
-  padding: 20px;
-}
-.navmarcas a, .navinicio a {
-  color: white;
-  padding: 10px;
-  text-decoration: none;
-}
-.navmarcas, .navinicio {
-  background-color: black;
-  text-align: center;
-  padding: 10px 0;
-}
-h1, h3, h4, h5 {
-  text-align: center;
-}
-
-.redsocial li .face {
-  position: absolute;
-  top: 80px;
-  right: 5px;
-  font-size: 2em;
-  cursor: pointer;
-}
-
-.redsocial li .ig {
-  position: absolute;
-  top: 160px;
-  right: 5px;
-  font-size: 2em;
-  cursor: pointer;
-}
-
-.redsocial img {
-  border-radius: 50%;
-}
-iframe {
-  display: block;
-  margin: 0 auto;
-}
-
-#toggle{
-  display: none;
- }
-
-#label_toggle{
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 2em;
-  cursor: pointer;
-}
-.dark{
-  background-color: black;
-  color: aliceblue;
-  transition: all 1.5s ease;
-}
-
-/* ------------------------------------------------------------------------------------------------------------------ */
-
-html, body, div, span, applet, object, iframe{
-	width: 500;
-
-}
-h1{
-	font-size: 100px;
-	height: 300px;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
- h2, h3{
-	font-size: 30px;
-	height: 50px;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	margin:auto;
- } h4{
-	font-size: 40px;
-	height: 100px;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
- } h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img{width: 500;} ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav{height: 100px;} output, ruby, section, summary,
-time, mark, audio, video {
+:root {
+	--primary-color: #2c3e50;
+	--secondary-color: #3498db;
+	--text-color: #333;
+	--light-bg: #f5f6fa;
+	--dark-bg: #2c3e50;
+	--spacing: 2rem;
+  }
+  
+  * {
 	margin: 0;
 	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav{ 
-	width: 100%; 
-	text-align: center;
-	padding: 10px;
-	border-radius: 5px; /* añade bordes redondeados */
-	border: 1px solid #ccc; /* añade un borde */   
-	transition: box-shadow 0.3s ease;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-	transform: scale(2.1);
-	} 
-	section {
-	display: block;
-}
-body {
-	line-height: 2;
-	background: rgb(209, 206, 206) ;
-	color: rgb(8, 8, 8);
-	
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 3;
-}
-
-.contenedor p {
+	box-sizing: border-box;
+  }
   
- 
-	flex-basis: 100%;
-	  
-	 
-	text-align: auto;
-	  
-	 
-	margin-top: 10px;
-	}
-.textwhite{
-	color:whitesmoke;
-	font-family: 'Courier New', Courier, monospace;
-}
-ul{
-	margin-left: 1970px;
-	margin-top: 140px;
-}
-h5{
-	font-size: 30px;
-	height: 50px;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	margin-left: 1700px;
-	margin-top: -300px;
- }
- #choche{
-	margin-top: -100px;
- }
-.dark{
-background-color: black;
-color: aliceblue;
-transition: all 1.5s ease;
-}
+  body {
+	font-family: 'Segoe UI', system-ui, sans-serif;
+	line-height: 1.6;
+	color: var(--text-color);
+	background-color: var(--light-bg);
+  }
+  
+  /* Header y Navegación */
+  .navmarcas {
+	position: sticky;
+	top: 0;
+	background: var(--primary-color);
+	padding: 1rem;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+	z-index: 1000;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 1rem;
+  }
+  
+  .navmarcas a {
+	color: white;
+	text-decoration: none;
+	padding: 0.5rem 1rem;
+	border-radius: 4px;
+	transition: background 0.3s;
+  }
+  
+  .navmarcas a:hover {
+	background: var(--secondary-color);
+  }
+  
+  /* Secciones principales */
+  section {
+	padding: var(--spacing);
+	max-width: 1200px;
+	margin: 0 auto;
+  }
+  
+  h1 {
+	font-size: 3rem;
+	text-align: center;
+	margin: 2rem 0;
+	color: var(--primary-color);
+  }
+  
+  h3 {
+	font-size: 2rem;
+	color: var(--secondary-color);
+	margin-bottom: 1rem;
+  }
+  
+  /* Cards de motos */
+  .moto-card {
+	background: white;
+	border-radius: 8px;
+	padding: 2rem;
+	margin-bottom: 2rem;
+	box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  .moto-card img {
+	width: 100%;
+	max-width: 500px;
+	height: auto;
+	border-radius: 8px;
+	margin: 1rem auto;
+	display: block;
+  }
+  
+  /* Formulario de registro */
+  .form-container {
+	background: linear-gradient(145deg, #ffffff, #f3f3f3);
+	border-radius: 20px;
+	padding: 2rem;
+	box-shadow: 20px 20px 60px #d9d9d9,
+				-20px -20px 60px #ffffff;
+  }
+  
+  input, select, textarea {
+	width: 100%;
+	padding: 0.8rem;
+	margin: 0.5rem 0;
+	background: #f8f9fa;
+	border: 2px solid transparent;
+	border-radius: 4px;
+	transition: all 0.3s;
+  }
+  
+  input:focus, select:focus, textarea:focus {
+	border-color: var(--secondary-color);
+	box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+	outline: none;
+  }
+  
+  button {
+	background: linear-gradient(145deg, var(--secondary-color), #2980b9);
+	color: white;
+	padding: 0.8rem 1.5rem;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 0.2s;
+  }
+  
+  button:hover {
+	transform: translateY(-2px);
+	background: #2980b9;
+  }
+  
+  /* Tabla de motos registradas */
+  table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 2rem 0;
+	background: white;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  th, td {
+	padding: 1rem;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+	background: var(--primary-color);
+	color: white;
+  }
+  
+  tr:hover {
+	background-color: rgba(52, 152, 219, 0.1);
+  }
+  
+  td button {
+	padding: 0.5rem 1rem;
+	margin: 0 0.25rem;
+  }
+  
+  td button:first-child {
+	background: linear-gradient(145deg, #3498db, #2980b9);
+  }
+  
+  td button:last-child {
+	background: linear-gradient(145deg, #e74c3c, #c0392b);
+  }
+  
+  /* Modo oscuro */
+  body.dark {
+	background: var(--dark-bg);
+	color: white;
+  }
+  
+  body.dark .moto-card,
+  body.dark .form-container {
+	background: #34495e;
+	color: white;
+  }
+  
+  
+  /* Redes sociales */
+  .redsocial {
+	position: fixed;
+	right: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 100;
+  }
+  
+  .redsocial li {
+	margin: 10px 0;
+  }
+  
+  .redsocial img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	transition: transform 0.3s;
+  }
+  
+  .redsocial img:hover {
+	transform: scale(1.1);
+  }
+  
+  
+  /* Estilo para el formulario oculto */
+  .hidden {
+	  display: none;
+  }
+  
+  /* Estilos para mensajes de validación */
+  .error-message {
+	  color: #e74c3c;
+	  font-size: 0.9em;
+	  margin-top: 5px;
+  }
+  
+  /* Estilos para inputs válidos/inválidos */
+  input:valid {
+	  border-color: #2ecc71;
+  }
+  
+  input:invalid {
+	  border-color: #e74c3c;
+  }
